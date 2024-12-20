@@ -52,7 +52,7 @@ class CategoryRepository {
   async delete(id: number) {
     // Execute the SQL DELETE query to delete an existing category from the "category" table
     const [result] = await databaseClient.query<Result>(
-      "delete from category where id = ?",
+      "delete * from category where id = ?",
       [id],
     );
 

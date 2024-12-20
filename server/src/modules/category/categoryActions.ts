@@ -6,6 +6,23 @@ import categoryRepository from "./categoryRepository";
 
 import type { RequestHandler } from "express";
 
+const validate: RequestHandler = (req, res, next) => {
+  type ValidationError = {
+    field: string;
+    message: string;
+  };
+
+  const errors: ValidationError[] = [];
+
+  const { name } = req.body;
+
+  if (errors.length === 0) {
+    next();
+  } else {
+    res.status(400).json({ validationErrors: errors });
+  }
+};
+
 const browse: RequestHandler = async (req, res, next) => {
   try {
     // Fetch all categories
@@ -96,4 +113,4 @@ const destroy: RequestHandler = async (req, res, next) => {
 
 // Export them to import them somewhere else
 
-export default { browse, read, edit, add, destroy };
+export default { browse, read, edit, add, destroy, validate };

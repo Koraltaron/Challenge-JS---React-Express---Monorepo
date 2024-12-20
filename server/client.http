@@ -1,0 +1,33 @@
+GET http://localhost:3310/api/programs/1 HTTP/1.1
+
+###
+
+POST http://localhost:3310/api/programs HTTP/1.1
+content-type: application/json
+
+{
+  "title": "saumon",
+  "synopsis": "poivre",
+  "poster": "carotte",
+  "country": "courgette",
+  "year": "1002",
+  "category_id": "1"
+}
+
+###
+
+PUT http://localhost:3310/api/programs/4 HTTP/1.1
+content-type: application/json
+
+{
+  "title": "truite",
+  "synopsis": "poivre",
+  "poster": "carotte",
+  "country": "courgette",
+  "year": "1002",
+  "category_id": "1"
+}
+
+###
+
+DELETE http://localhost:3310/api/programs/4 HTTP/1.1
