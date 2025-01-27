@@ -1,0 +1,23 @@
+.program-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.program-form > label {
+  padding: 20px 0 0 10px;
+}
+
+.program-form > input {
+  padding: 5px 0 5px 5px;
+}
+
+.program-form > button {
+  margin: 20px 0 0 0;
+  padding: 10px 0 10px 0;
+}
+
+.program-form > button:hover {
+  cursor: pointer;
+}
