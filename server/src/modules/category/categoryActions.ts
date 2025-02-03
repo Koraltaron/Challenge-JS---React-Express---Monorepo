@@ -100,6 +100,7 @@ const destroy: RequestHandler = async (req, res, next) => {
   try {
     // Delete a specific category based on the provided ID
     const categoryId = Number(req.params.id);
+    console.warn(categoryId);
 
     await categoryRepository.delete(categoryId);
 

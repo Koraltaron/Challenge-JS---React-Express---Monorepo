@@ -31,3 +31,12 @@ content-type: application/json
 ###
 
 DELETE http://localhost:3310/api/programs/4 HTTP/1.1
+
+###
+
+GET http://localhost:3310/api/categories HTTP/1.1
+
+###
+
+DELETE http://localhost:3310/api/categories/1 HTTP/1.1
+
